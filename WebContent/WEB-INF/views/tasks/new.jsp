@@ -5,7 +5,12 @@
         <h2>メッセージ新規作成ページ</h2>
 
         <form method="POST" action="${pageContext.request.contextPath}/create">
-            <c:import url="_form.jsp" />
+            <label for="content">タスクの内容</label><br />
+            <input type="text" name="content" value="${task.content}" />
+            <br /><br />
+
+            <input type="hidden" name="_to" value="${_to}" />
+            <button type="submit">登録</button>
         </form>
 
         <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
